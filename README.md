@@ -182,6 +182,9 @@ web3.eth.getStorageAt("0xe5c5aaa604c12273b92d8e48d133158abbf44a5f", 0)
 
 - Here, **0x000000000000000000000000000000000000000000000000000000000000002d** is the hexadecimal value for 45 with which the number was reinitialized.
 
+Note : This tutorial used an **ephemeral blockchain** that is **completely destroyed and started afresh during each dev-mode session.**
+
+
 ## Acknowledgements
 * [Go Etehreum - Developer Mode](https://geth.ethereum.org/docs/developers/dapp-developer/dev-mode)
   
