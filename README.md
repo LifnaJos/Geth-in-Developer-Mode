@@ -11,6 +11,8 @@ Note : Starting Geth in developer mode does the following:
 * Uses the **Clique proof-of-authority** consensus engine which allows blocks to be mined as-needed without excessive CPU and memory consumption
 * Uses **on-demand block generation**, producing blocks when transactions are waiting to be mined
 
+# [To setup Geth](https://github.com/LifnaJos/Private-Ethereum-Blockchain-setup-using-Geth#step---1--installing-geth-on-ubuntu)
+
 # Tutorial - 1 : Create a single-node Ethereum test network with no connections to any external peers
 
 ## Step - 1 : Start Geth in Dev Mode
