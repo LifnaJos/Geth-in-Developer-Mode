@@ -1,7 +1,7 @@
 # Run-a-node-in-Geth-Developer-Mode
 This repository guides the users
- - how to **[create a single-node Ethereum test network with no connections to any external peers.](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---1--create-a-single-node-ethereum-test-network-with-no-connections-to-any-external-peers)**
- - how to **[spin up a local Geth into a testnet and deploy a simple smart contract written using the Remix](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---2--convert-a-local-geth-into-a-testnet-and-deploy-a-simple-smart-contract-written-using-the-remix)** online integrated development environment (IDE). 
+1. **[Create a single-node Ethereum test network with no connections to any external peers.](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---1--create-a-single-node-ethereum-test-network-with-no-connections-to-any-external-peers)**
+2. **[Convert a local Geth into a testnet and deploy a simple smart contract written using the Remix](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---2--convert-a-local-geth-into-a-testnet-and-deploy-a-simple-smart-contract-written-using-the-remix)** online integrated development environment (IDE). 
 
 Note : Starting Geth in developer mode does the following:
 * Initializes the data directory with a **testing genesis block**
@@ -103,6 +103,7 @@ geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,d
 
 - The terminal will display the following logs, confirming Geth has started successfully in developer mode.
 - The node is waiting for the transaction to mine the block
+
 ![geth dev 2](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/7dd08fd5ca97bf38eb3234b7f05d54500a2bf989/images/Screenshot%20from%202023-08-23%2003-22-27.png)
 
 ## Step - 2 : Open a Smart Contract in Remix IDE
@@ -115,14 +116,71 @@ geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,d
 
 ![Compile](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/f49c1109f572267b0442f63b39909ab0b53c075c/images/Screenshot%20from%202023-08-23%2003-01-08.png)
 
-- Click the Deploy menu in Remix IDE.
+- Click the **Deploy** menu in Remix IDE.
 - In the drop-down menu labelled **ENVIRONMENT**, select **Custom - External Http Provider**.
+
 ![Menu](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/1a5ace708de3ec845a6bd7e18839ea31425275d7/images/Screenshot%20from%202023-08-23%2003-04-48.png)
   
 - This will open an information pop-up with instructions for configuring Geth
 - Click OK.
-- The ACCOUNT field should automatically populate with the address of the account created earlier using the Geth Javascript console.
+
 ![Congig](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/5c84dbdc83420910abc718e8a304667536c0336e/images/Screenshot%20from%202023-08-23%2003-12-20.png)
+
+- The **ACCOUNT** field should automatically populate with the address of the account created earlier using the Geth Javascript console.
+
+![Account](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/e316ccf5a30f79ea459c6b2d631b8a90b1edf064/images/Screenshot%20from%202023-08-23%2003-34-51.png)
+
+- This account is same as the one displayed on the Javascript Console
+
+![Console](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/70a18adfb0dc5bb0bfaf2cc91988fad4014f976e/images/Screenshot%20from%202023-08-23%2003-39-42.png)
+
+- To deploy Storage.sol, click **DEPLOY**.
+- A transaction occurs and block is mined
+ 
+![Deploy](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/7ea97c0bf9688066479a0538754dc1df0dd811ec/images/Screenshot%20from%202023-08-23%2003-44-15.png)
+
+- The following logs in the Geth terminal confirm that the contract was successfully deployed.
+
+![Geth dev node](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/4ed3e63fff8df0920798a4b69e146c0d35eb3055/images/Screenshot%20from%202023-08-23%2003-52-56.png)
+
+- To fetch the transaction details from the terminal
+
+![Transaction](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/c761fae4f781979c6ea7d8bba000bcef9243b9a4/images/Screenshot%20from%202023-08-23%2003-54-28.png)
+
+**3. Interact with contract using Remix**
+- The contract is now **deployed on a local testnet version of the Ethereum blockchain**.
+- This means there is a **contract address that contains executable bytecode that can be invoked by sending transactions with instructions**
+- After deployment, the **Deployed Contracts** tab in the sidebar automatically populates with the public functions exposed by Storage.sol.
+- To send a value to the contract storage, type a number in the field adjacent to the store button, then click the button.
+- Transaction occurs and block is mined
+  
+Note : 
+- The **from** address is the account that sent the transaction,
+- the **to** address is the **deployment address of the contract**.
+- The **value** entered into Remix is now in **storage at that contract address**.
+- This can be retrieved using Remix by calling the retrieve function - to do this simply click the retrieve button.
+  
+![send](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/cc9a4cbcb0bf5325a55da65de5a1f61646b3b233/images/Screenshot%20from%202023-08-23%2004-06-00.png)
+
+- Check the transaction mined and added to the block from the JavaScript Console
+
+![Transaction console](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/d467c62b28a45ff43328a7dad876e097406808f0/images/Screenshot%20from%202023-08-23%2004-09-05.png)
+
+- To retrive value, click the button - **retrieve**
+
+![Retrieve](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/cc9a4cbcb0bf5325a55da65de5a1f61646b3b233/images/Screenshot%20from%202023-08-23%2004-05-42.png)
+
+- Alternatively, it can be retrieved using **web3.getStorageAt** using the Geth Javascript console.
+```
+web3.eth.getStorageAt("0xe5c5aaa604c12273b92d8e48d133158abbf44a5f", 0)
+```
+- The following command returns the value in the contract storage
+- Here, **0xe5c5aaa604c12273b92d8e48d133158abbf44a5f** (replace the given address of the receipient in the Geth logs).
+-  Its the storage address
+
+![Output](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/7e4d51b122a109bec68f73aba0ff8ffe6590c53f/images/Screenshot%20from%202023-08-23%2004-27-52.png)
+
+- Here, **0x000000000000000000000000000000000000000000000000000000000000002d** is the hexadecimal value for 45 with which the number was reinitialized.
 
 ## Acknowledgements
 * [Go Etehreum - Developer Mode](https://geth.ethereum.org/docs/developers/dapp-developer/dev-mode)
