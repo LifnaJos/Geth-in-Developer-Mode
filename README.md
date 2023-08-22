@@ -1,7 +1,7 @@
 # Run-a-node-in-Geth-Developer-Mode
 This repository guides the users
  - how to **[create a single-node Ethereum test network with no connections to any external peers.](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---1--create-a-single-node-ethereum-test-network-with-no-connections-to-any-external-peers)**
- - how to **spin up a local Geth into a testnet and deploy a simple smart contract written using the Remix** online integrated development environment (IDE). 
+ - how to **[spin up a local Geth into a testnet and deploy a simple smart contract written using the Remix](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/main/README.md#tutorial---2--convert-a-local-geth-into-a-testnet-and-deploy-a-simple-smart-contract-written-using-the-remix)** online integrated development environment (IDE). 
 
 Note : Starting Geth in developer mode does the following:
 * Initializes the data directory with a **testing genesis block**
