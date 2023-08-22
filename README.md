@@ -1,4 +1,4 @@
-![image](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/assets/7581840/045a3478-5d17-4ae7-87c3-b7d6e29df0bc)# Run-a-node-in-Geth-Developer-Mode
+# Run-a-node-in-Geth-Developer-Mode
 This repository guides the users how to c**reate a single-node Ethereum test network with no connections to any external peers.** 
 
 Also, this repository helps to spin up a local Geth into a testnet and deploy a simple smart contract written using the Remix online integrated development environment (IDE). 
