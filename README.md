@@ -151,14 +151,12 @@ geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,d
 - The contract is now **deployed on a local testnet version of the Ethereum blockchain**.
 - This means there is a **contract address that contains executable bytecode that can be invoked by sending transactions with instructions**
 - After deployment, the **Deployed Contracts** tab in the sidebar automatically populates with the public functions exposed by Storage.sol.
-- To send a value to the contract storage, type a number in the field adjacent to the store button, then click the button.
-- Transaction occurs and block is mined
+- To send a value to the contract storage, type a number in the field adjacent to the store button, then click the button. Transaction is submitted and block is mined
   
 Note : 
 - The **from** address is the account that sent the transaction,
 - the **to** address is the **deployment address of the contract**.
 - The **value** entered into Remix is now in **storage at that contract address**.
-- This can be retrieved using Remix by calling the retrieve function - to do this simply click the retrieve button.
   
 ![send](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/cc9a4cbcb0bf5325a55da65de5a1f61646b3b233/images/Screenshot%20from%202023-08-23%2004-06-00.png)
 
@@ -168,7 +166,7 @@ Note :
 
 - To retrive value, click the button - **retrieve**
 
-![Retrieve](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/cc9a4cbcb0bf5325a55da65de5a1f61646b3b233/images/Screenshot%20from%202023-08-23%2004-05-42.png)
+![Retrieve](https://github.com/LifnaJos/Geth-in-Developer-Mode/blob/47519ce4ab9f063c71c82566befe8892af1aa412/images/Screenshot%20from%202023-08-23%2004-35-27.png)
 
 - Alternatively, it can be retrieved using **web3.getStorageAt** using the Geth Javascript console.
 ```
