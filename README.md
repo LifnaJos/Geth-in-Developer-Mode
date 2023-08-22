@@ -95,10 +95,12 @@ eth.getTransaction("0x19ec8c7da780b5492c1cca65408f24f1ad8b5a38114a0a5c862e47e875
 
 # Tutorial - 2 : Convert a local Geth into a testnet and deploy a simple smart contract written using the Remix
 
+- Create a folder named, **geth_node** for this tutorial
+
 ## Step - 1 : Start Geth in Dev Mode
 ```
 geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,debug,personal,net --vmdebug --datadir geth_node --dev console
-```
+``` 
 ![geth dev 1](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/7dd08fd5ca97bf38eb3234b7f05d54500a2bf989/images/Screenshot%20from%202023-08-23%2003-22-08.png)
 
 - The terminal will display the following logs, confirming Geth has started successfully in developer mode.
