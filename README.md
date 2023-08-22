@@ -51,7 +51,7 @@ eth.getBalance(eth.coinbase)
 ```
 web3.fromWei(eth.getBalance(eth.coinbase))
 ```
-![Geth Console]()
+![Geth Console](https://github.com/LifnaJos/Run-a-node-in-Geth-Developer-Mode/blob/e487f1be25c21a5ef799baab10cdd11ac52f08e3/images/Screenshot%20from%202023-08-23%2002-17-57.png)
 Note:
 - The return value is in units of Wei, which is divided by 118 to give units of ether.
 - This can be done explicitly or by calling the web3.FromWei() function
